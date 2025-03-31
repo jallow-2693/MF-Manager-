@@ -1,4 +1,3 @@
--- Table : Joueurs
 CREATE TABLE Joueurs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nom VARCHAR(100),
@@ -12,7 +11,6 @@ CREATE TABLE Joueurs (
     est_junior BOOLEAN DEFAULT 0 -- Indique si le joueur est un junior Cdf
 );
 
--- Table : Tactiques
 CREATE TABLE Tactiques (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     club_id INTEGER,
@@ -21,7 +19,6 @@ CREATE TABLE Tactiques (
     consignes TEXT
 );
 
--- Table : Entraînements
 CREATE TABLE Entrainements (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     club_id INTEGER,
@@ -30,7 +27,6 @@ CREATE TABLE Entrainements (
     impact_niveau INTEGER -- Impact de l'entraînement sur le niveau des joueurs (0-100)
 );
 
--- Table : Transferts
 CREATE TABLE Transferts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     joueur_id INTEGER,
@@ -41,7 +37,6 @@ CREATE TABLE Transferts (
     date DATE
 );
 
--- Table : Staff
 CREATE TABLE Staff (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nom VARCHAR(100),
@@ -51,7 +46,6 @@ CREATE TABLE Staff (
     club_id INTEGER
 );
 
--- Table : Evenements
 CREATE TABLE Evenements (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     titre VARCHAR(100),
@@ -60,7 +54,6 @@ CREATE TABLE Evenements (
     club_id INTEGER
 );
 
--- Table : Presse
 CREATE TABLE Presse (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     titre VARCHAR(100),
@@ -69,7 +62,6 @@ CREATE TABLE Presse (
     club_id INTEGER
 );
 
--- Table : Sponsors
 CREATE TABLE Sponsors (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nom VARCHAR(100),
@@ -78,7 +70,6 @@ CREATE TABLE Sponsors (
     club_id INTEGER
 );
 
--- Table : Clubs
 CREATE TABLE Clubs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nom VARCHAR(100),
